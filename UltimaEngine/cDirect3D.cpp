@@ -13,7 +13,16 @@ cDirect3D::~cDirect3D(void)
 
 	mCarMesh->~cStaticMesh();
 
-	mRanger1->~cStaticMesh();
+	mRanger01->~cStaticMesh();
+	mRanger02->~cStaticMesh();
+	mRanger03->~cStaticMesh();
+	mRanger04->~cStaticMesh();
+	mRanger05->~cStaticMesh();
+	mRanger06->~cStaticMesh();
+	mRanger07->~cStaticMesh();
+	mRanger08->~cStaticMesh();
+	mRanger09->~cStaticMesh();
+	mRanger10->~cStaticMesh();
 	mSkyBox->~cStaticMesh();
 	mPlaneMesh->~cStaticMesh();
 	myMesh4->~cStaticMesh();
@@ -46,7 +55,16 @@ VOID cDirect3D::Init()
 	cDirect3D::mSkyBox						= NULL;
 
 	cDirect3D::mCarMesh						= NULL;
-	cDirect3D::mRanger1						= NULL;
+	cDirect3D::mRanger01					= NULL;
+	cDirect3D::mRanger02					= NULL;
+	cDirect3D::mRanger03					= NULL;
+	cDirect3D::mRanger04					= NULL;
+	cDirect3D::mRanger05					= NULL;
+	cDirect3D::mRanger06					= NULL;
+	cDirect3D::mRanger07					= NULL;
+	cDirect3D::mRanger08					= NULL;
+	cDirect3D::mRanger09					= NULL;
+	cDirect3D::mRanger10					= NULL;
 	cDirect3D::mPlaneMesh					= NULL;
 	cDirect3D::myMesh4						= NULL;
 
@@ -127,7 +145,17 @@ HRESULT cDirect3D::InitD3D(HWND hWnd, HINSTANCE hInst)
     mCamera			= new cCamera(D3DXVECTOR3(0.0f, 0.0f,-15.0f));
 	
 	mCarMesh		= new cStaticMesh(g_pd3dDevice, "car");
-	mRanger1		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger01		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger02		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger03		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger04		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger05		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger06		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger07		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger08		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger09		= new cStaticMesh(g_pd3dDevice, "ranger");
+	mRanger10		= new cStaticMesh(g_pd3dDevice, "ranger");
+
 	mPlaneMesh		= new cStaticMesh(g_pd3dDevice, "plane");
 	myMesh4			= new cStaticMesh(g_pd3dDevice, "plane");
 
@@ -367,17 +395,98 @@ VOID cDirect3D::Render()
 		mPlaneMesh->Render();
 
  	
-		//Start of Ranger
-		Scale = mRanger1->SetScale(0.1f, 0.1f, 0.1f);
-		Rotate = mRanger1->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
-		Move = mRanger1->SetPosition(1.0f, -70.0f, 20.0f);
+		//Start of Ranger(s)
+		//Ranger 01
+		Scale = mRanger01->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger01->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger01->SetPosition(150.0f, -76.0f, 100.0f);
 		matSum = Scale*Rotate*Move;
 				
 		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
-		mRanger1->Render();
+		mRanger01->Render();
 
+		//Ranger 02
+		Scale = mRanger02->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger02->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger02->SetPosition(148.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger02->Render();
 
- 	//Start of Tiger No.3
+		//Ranger 03
+		Scale = mRanger03->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger03->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger03->SetPosition(146.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger03->Render();
+
+		//Ranger 04
+		Scale = mRanger04->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger04->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger04->SetPosition(144.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger04->Render();
+
+		//Ranger05
+		Scale = mRanger05->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger05->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger05->SetPosition(142.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger05->Render();
+
+		//Ranger 06
+		Scale = mRanger06->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger06->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger06->SetPosition(140.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger06->Render();
+
+		//Ranger 07
+		Scale = mRanger07->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger07->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger07->SetPosition(138.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger07->Render();
+
+		//Ranger 08
+		Scale = mRanger08->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger08->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger08->SetPosition(136.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger08->Render();
+
+		//Ranger 09
+		Scale = mRanger09->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger09->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger09->SetPosition(134.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger09->Render();
+
+		//Ranger 10
+		Scale = mRanger10->SetScale(0.2f, 0.2f, 0.2f);
+		Rotate = mRanger10->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, Spin, 0.0f);
+		Move = mRanger10->SetPosition(132.0f, -76.0f, 100.0f);
+		matSum = Scale*Rotate*Move;
+				
+		g_pd3dDevice->SetTransform(D3DTS_WORLD, &matSum);
+		mRanger10->Render();
+
+ 	//Start of car Mesh
 		Scale = mCarMesh->SetScale(0.7f, 0.7f, 0.7f);
 		Rotate = mCarMesh->SetRotation(0.0f, 0.0f, 0.0f);//(0.0f, 0.0f, Spin);
 		Move = mCarMesh->SetPosition(100.0f, -77.0f, 200.0f);

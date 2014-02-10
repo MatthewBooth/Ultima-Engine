@@ -37,7 +37,16 @@ private:
 	cStaticMesh				*mTerrain;
 
 	cStaticMesh				*mCarMesh;
-	cStaticMesh				*mRanger1;
+	cStaticMesh				*mRanger01;
+	cStaticMesh				*mRanger02;
+	cStaticMesh				*mRanger03;
+	cStaticMesh				*mRanger04;
+	cStaticMesh				*mRanger05;
+	cStaticMesh				*mRanger06;
+	cStaticMesh				*mRanger07;
+	cStaticMesh				*mRanger08;
+	cStaticMesh				*mRanger09;
+	cStaticMesh				*mRanger10;
 	cStaticMesh				*mPlaneMesh;
 	cStaticMesh				*myMesh4;
 

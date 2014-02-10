@@ -72,5 +72,11 @@ VOID cFont::Render()
 
 	//Draw the text
 	m_Font->DrawText(NULL, mText, -1, &mFontPos, mAlignment, mColor);
+
+	if(m_Font != NULL)
+	 {
+		m_Font->Release(); //release font
+		m_Font = NULL;
+	 }
 }
 

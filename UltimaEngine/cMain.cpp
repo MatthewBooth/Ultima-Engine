@@ -118,7 +118,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
             ZeroMemory( &msg, sizeof(msg) );
             while( msg.message!=WM_QUIT )
             {
-                if( PeekMessage( &msg, NULL, 0U, 0U, PM_REMOVE ) )
+                if( PeekMessage( &msg, NULL, 0U, 0U, PM_REMOVE ) != 0 )
                 {
                     TranslateMessage( &msg );
                     DispatchMessage( &msg );
