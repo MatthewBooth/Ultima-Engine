@@ -1,0 +1,73 @@
+; Callback Definition Script 'US Ranger.cbd'
+; -----------------------------------------------------------------------------
+; Name : Walk_Legs_Only
+; Desc : Callback definitions for this animation set
+; -----------------------------------------------------------------------------
+[Walk_Legs_Only]
+
+CallbackCount               = 4
+
+; First Callback (Left foot touches ground)
+Callback[0].Ticks           = 20
+Callback[0].Action          = PLAY_SOUND
+Callback[0].PlayMode        = RANDOM
+Callback[0].SampleCount     = 4
+Callback[0].Sample[0].File  = Data\Sounds\Footsteps L1.wav
+Callback[0].Sample[1].File  = Data\Sounds\Footsteps L2.wav
+Callback[0].Sample[2].File  = Data\Sounds\Footsteps L3.wav
+Callback[0].Sample[3].File  = Data\Sounds\Footsteps L4.wav
+
+; Second Callback (Right foot touches ground)
+Callback[1].Ticks           = 40
+Callback[1].Action          = PLAY_SOUND
+Callback[1].PlayMode        = RANDOM
+Callback[1].SampleCount     = 4
+Callback[1].Sample[0].File  = Data\Sounds\Footsteps R1.wav
+Callback[1].Sample[1].File  = Data\Sounds\Footsteps R2.wav
+Callback[1].Sample[2].File  = Data\Sounds\Footsteps R3.wav
+Callback[1].Sample[3].File  = Data\Sounds\Footsteps R4.wav
+
+; First Callback (Left foot touches ground)
+Callback[2].Ticks           = 60
+Callback[2].Action          = PLAY_SOUND
+Callback[2].PlayMode        = RANDOM
+Callback[2].SampleCount     = 4
+Callback[2].Sample[0].File  = Data\Sounds\Footsteps L1.wav
+Callback[2].Sample[1].File  = Data\Sounds\Footsteps L2.wav
+Callback[2].Sample[2].File  = Data\Sounds\Footsteps L3.wav
+Callback[2].Sample[3].File  = Data\Sounds\Footsteps L4.wav
+
+; Second Callback (Right foot touches ground)
+Callback[3].Ticks           = 80
+Callback[3].Action          = PLAY_SOUND
+Callback[3].PlayMode        = RANDOM
+Callback[3].SampleCount     = 4
+Callback[3].Sample[0].File  = Data\Sounds\Footsteps R1.wav
+Callback[3].Sample[1].File  = Data\Sounds\Footsteps R2.wav
+Callback[3].Sample[2].File  = Data\Sounds\Footsteps R3.wav
+Callback[3].Sample[3].File  = Data\Sounds\Footsteps R4.wav
+
+[Strafe_Right]
+
+; Strafe right is the only set used (it's just played in reverse for left)
+CallbackCount               = 2
+
+; First Callback (Left foot touches ground)
+Callback[0].Ticks           = 10
+Callback[0].Action          = PLAY_SOUND
+Callback[0].PlayMode        = RANDOM
+Callback[0].SampleCount     = 4
+Callback[0].Sample[0].File  = Data\Sounds\Footsteps L1.wav
+Callback[0].Sample[1].File  = Data\Sounds\Footsteps L2.wav
+Callback[0].Sample[2].File  = Data\Sounds\Footsteps L3.wav
+Callback[0].Sample[3].File  = Data\Sounds\Footsteps L4.wav
+
+; Second Callback (Right foot touches ground)
+Callback[1].Ticks           = 30
+Callback[1].Action          = PLAY_SOUND
+Callback[1].PlayMode        = RANDOM
+Callback[1].SampleCount     = 4
+Callback[1].Sample[0].File  = Data\Sounds\Footsteps R1.wav
+Callback[1].Sample[1].File  = Data\Sounds\Footsteps R2.wav
+Callback[1].Sample[2].File  = Data\Sounds\Footsteps R3.wav
+Callback[1].Sample[3].File  = Data\Sounds\Footsteps R4.wav
